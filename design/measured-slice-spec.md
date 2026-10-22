@@ -1,7 +1,7 @@
 # Measured: Slice spesifikasyonu
 
 > Figma tasarımı ve kodlama için ortak kaynak. Yapı Türkçe, **uygulama metinleri (copy) İngilizce ve kesindir**.
-> Rakip: GoTall (31 adım, sonuç paywall arkasında, "$0.67/week" çerçevesi, 3 dk sahte sayaç). Kaynak: `research/gotall-research.md`.
+> Rakip: GoTall (31 adım, sonuç paywall arkasında, "$0.67/week" çerçevesi, "Special offer" geri sayımı 2:59:59). Kaynak: `research/gotall-research.md`.
 
 ## 1. Value proposition
 **One-line test:** For 13–17-year-olds who want to know how tall they'll get but hate 30-question quizzes that end in a paywall, Measured shows your honest height range in under a minute, unlike GoTall, because you see your result before any paywall and the price is never hidden.

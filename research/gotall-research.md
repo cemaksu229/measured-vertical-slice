@@ -91,14 +91,14 @@ Known sequence (timestamps from the teardown video):
 3. 02:57 paywall, shown *before* the result.
 4. 04:10 trial timeline explainer screen before purchase confirmation.
 5. 05:03 puberty quiz answers later referenced by AI Coach (post-purchase features: AI Coach, food scanning, "What if?" planner).
-Paywall (ScreensDesign): 3-day free trial converting to yearly plan; yearly shown as "$0.67/week"; "3-minute countdown timer"; testimonial + star rating. Not covered: other plans, exact prices, close-button behaviour, discount offers. Reviewers mention a later "discount" offer ("A free subscription was also never offered, just a 'discount'", us, 1★) and a weekly option (~$5/wk).
+Paywall (ScreensDesign): 3-day free trial converting to yearly plan; yearly shown as "$0.67/week"; "Special offer" countdown chip reading 2:59:59 (corrected 22 Oct from the captured paywall still; earlier note said 3 minutes); testimonial + star rating. Not covered: other plans, exact prices, close-button behaviour, discount offers. Reviewers mention a later "discount" offer ("A free subscription was also never offered, just a 'discount'", us, 1★) and a weekly option (~$5/wk).
 Stork (secondary, unverified): paywall after quiz, before reveal; claims "91% of users who hit the app's paywall convert" (implausible; do not rely on it).
 Gaps: full 31 question list, close-button behaviour, plan screen layout. Needs our own screenshots.
 
 ## Honesty issues
 - Core promise ("height predictor") is withheld behind the paywall after ~15 min (one reviewer's estimate) of data entry; ad creatives reportedly show no paywall (reviews).
 - Price framing: "$0.67/week" for an annual plan; multiple reviewers report being charged $35-$60 at once (reviews, anecdotal).
-- Fake urgency: 3-minute countdown timer (ScreensDesign).
+- Fake urgency: "Special offer enabled" toggle + countdown chip 2:59:59 on the paywall (ScreensDesign still 44.png).
 - Fear/status copy reportedly used ("costs of being short", reviewer gb 1★, paraphrase of paywall copy - not verified by us).
 - Accuracy claims: "most accurate", "more accurate than just using a growth chart" with no published validation or error range; CDC growth charts describe population percentiles for ages 2-20, not an adult-height guarantee (inferred, general knowledge). Contradictory outputs between prediction screen and coach reported (au 2★). One teardown note: AI food analysis scored "2 boiled eggs" at "0%".
 - Mixed signals on ratings: 4.6 avg on 6.8K ratings vs ~80% 1-3★ in the recent review feed; a review says "They make you send a review and then long after you have to pay" (us, 1★) suggesting a review-gate (inferred, unverified).

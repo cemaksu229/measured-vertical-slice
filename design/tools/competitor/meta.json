@@ -1,0 +1,332 @@
+[
+ {
+  "i": 0,
+  "u": "https://media.screensdesign.com/avs-pp-640/f762c91dd47a4945a3d49a339a089ca8.webp",
+  "a": "GoTall app splash screen with a centered dark logo featuring an upward-pointing arrow on a vibrant lime-green background."
+ },
+ {
+  "i": 1,
+  "u": "https://media.screensdesign.com/avs-pp-640/962d97c640474295a49b88745a54dcf4.webp",
+  "a": "App tracking permission modal for GoTall, asking to track activity across other apps and websites, with Allow and Ask App Not to Track buttons."
+ },
+ {
+  "i": 2,
+  "u": "https://media.screensdesign.com/avs-pp-640/4616d0061be447f59779ebb66855a68f.webp",
+  "a": "Onboarding screen featuring a height prediction app mockup, a prompt to discover future height, and a Let's start button."
+ },
+ {
+  "i": 3,
+  "u": "https://media.screensdesign.com/avs-pp-640/40ef003859c94bb19b652b2d5dd6c4bd.webp",
+  "a": "Onboarding screen featuring a device mockup of an AI camera interface above a black card prompting users to predict their height with a Let's start button."
+ },
+ {
+  "i": 4,
+  "u": "https://media.screensdesign.com/avs-pp-640/3aec6b327e2a411f8f38379fc369b540.webp",
+  "a": "Onboarding screen featuring a product mockup of a fitness dashboard, a height prediction headline, and a Let's start button."
+ },
+ {
+  "i": 5,
+  "u": "https://media.screensdesign.com/avs-pp-640/1d680d07c2d347aa9ae531bc50cb7ac0.webp",
+  "a": "Onboarding screen introducing height prediction with a device mockup, heading to predict height, pagination, and a Let's start button."
+ },
+ {
+  "i": 6,
+  "u": "https://media.screensdesign.com/avs-pp-640/6716782fde034598af213da6e02d05cf.webp",
+  "a": "GoTall height prediction onboarding screen with a product mockup, a Let's start button, and privacy links."
+ },
+ {
+  "i": 7,
+  "u": "https://media.screensdesign.com/avs-pp-640/79cec7bdfa194cbbb1988b3a058e3acc.webp",
+  "a": "Onboarding screen featuring an AI chat interface mockup, a height prediction title, pagination dots, and a Let's start button."
+ },
+ {
+  "i": 8,
+  "u": "https://media.screensdesign.com/avs-pr-640/804f70e6994b42eabdea618cd9259ecc.webp",
+  "a": "Onboarding role selection screen with Teen and Parent cards in dark mode, showing the Parent card selected and a Continue button."
+ },
+ {
+  "i": 9,
+  "u": "https://media.screensdesign.com/avs-pr-640/3a43d33464d041cbb73aeaaf647f577e.webp",
+  "a": "Onboarding date picker asking when your child was born, with month, day, and year selectors and a Continue button."
+ },
+ {
+  "i": 10,
+  "u": "https://media.screensdesign.com/avs-pr-640/e6d66bcd7cb94d06b8e9ebaa806bf934.webp",
+  "a": "Onboarding screen asking for the child's gender with side-by-side selection cards, the male card selected, and a Continue button."
+ },
+ {
+  "i": 11,
+  "u": "https://media.screensdesign.com/avs-pr-640/4e84faa0d565416f94f5f087561161da.webp",
+  "a": "Onboarding height selection screen with a vertical height slider, Imperial units selected, and a Continue button."
+ },
+ {
+  "i": 12,
+  "u": "https://media.screensdesign.com/avs-pr-640/f4c91c7d96f84b699b9f42fe1862d643.webp",
+  "a": "Onboarding weight input screen with a slider showing 57 kg, a metric unit toggle, and a Continue button."
+ },
+ {
+  "i": 13,
+  "u": "https://media.screensdesign.com/avs-pr-640/614597b589f748cfbe844708038db472.webp",
+  "a": "Onboarding screen featuring a shoe size picker wheel with EU size 42 selected, a metric toggle, and a green Continue button."
+ },
+ {
+  "i": 14,
+  "u": "https://media.screensdesign.com/avs-pr-640/a9eb81d9748343e799e375df7f8070a9.webp",
+  "a": "GoTall onboarding referral survey with Mogg3d selected from a list of options and a neon green Continue button."
+ },
+ {
+  "i": 15,
+  "u": "https://media.screensdesign.com/avs-pr-640/08047c077c24468b85e16beb56aa74c9.webp",
+  "a": "Onboarding survey screen for the GoTall app asking users why they downloaded it, with two of three growth goals selected and a Continue button."
+ },
+ {
+  "i": 16,
+  "u": "https://media.screensdesign.com/avs-pr-640/74d1a270d7404262a6f433f64bdb3b77.webp",
+  "a": "GoTall onboarding educational screen featuring a growth trajectory chart comparing habits and a Continue button."
+ },
+ {
+  "i": 17,
+  "u": "https://media.screensdesign.com/avs-pr-640/2b73249bd8fa49b38caea9fb6cde7731.webp",
+  "a": "Onboarding screen asking what sports your child does, with Basketball, Running, and Swimming selected and a Continue button."
+ },
+ {
+  "i": 18,
+  "u": "https://media.screensdesign.com/avs-pr-640/e2ce19e068e24380ac8e632de661d078.webp",
+  "a": "Onboarding screen asking about a child's weekly exercise hours, with the 3-5 option selected in bright green and a Continue button."
+ },
+ {
+  "i": 19,
+  "u": "https://media.screensdesign.com/avs-pr-640/766cc867ab004fa18a1f871edd890cc1.webp",
+  "a": "Onboarding screen introducing daily child exercises with a central 3D illustration, a progress indicator, and a Continue button."
+ },
+ {
+  "i": 20,
+  "u": "https://media.screensdesign.com/avs-pr-640/fee79d05071d44eea8bb984f2281d713.webp",
+  "a": "Onboarding screen asking how many hours a child sleeps each night, featuring a vertical picker set to 7 and a Continue button."
+ },
+ {
+  "i": 21,
+  "u": "https://media.screensdesign.com/avs-pr-640/435f06139f2a48dca5ebb00dc237ae85.webp",
+  "a": "Onboarding screen introducing child sleep tracking with a central circular chart and a Continue button."
+ },
+ {
+  "i": 22,
+  "u": "https://media.screensdesign.com/avs-pr-640/edb0283876be45dd8e55a80e8ae3b1d8.webp",
+  "a": "Onboarding screen showing a salmon toast nutrition card with a height score and a Continue button."
+ },
+ {
+  "i": 23,
+  "u": "https://media.screensdesign.com/avs-pr-640/a0a39d1aa8964ac498ab7542ffe84efc.webp",
+  "a": "Onboarding screen asking for parents' heights with vertical selectors for Dad at 182 cm and Mom at 164 cm, a unit toggle, and a Continue button."
+ },
+ {
+  "i": 24,
+  "u": "https://media.screensdesign.com/avs-pr-640/4fe9affa92bb4341b3ff52d6ad3b72fb.webp",
+  "a": "Onboarding screen asking about family height patterns, with grandparents selected and a Continue button."
+ },
+ {
+  "i": 25,
+  "u": "https://media.screensdesign.com/avs-pr-640/52732b3a31be46e5b673c5d479f4277f.webp",
+  "a": "Onboarding screen asking for a child's race with the White option selected and a Continue button."
+ },
+ {
+  "i": 26,
+  "u": "https://media.screensdesign.com/avs-pr-640/c0d5304b069e4bfcb350f5b442026b07.webp",
+  "a": "Onboarding screen explaining weekly child height tracking, with floating activity cards, an updating growth prediction status showing 83% accuracy, and a Continue button."
+ },
+ {
+  "i": 27,
+  "u": "https://media.screensdesign.com/avs-pr-640/72c42f5ae2b641889ae2419f5326110e.webp",
+  "a": "Notification permission request screen in the GoTall onboarding flow with a centered system prompt modal and Allow and Don't Allow buttons."
+ },
+ {
+  "i": 28,
+  "u": "https://media.screensdesign.com/avs-pr-640/1141f483eaea420bb40ea54525e74961.webp",
+  "a": "Permissions onboarding screen prompting the user to enable notifications with a centered system alert modal and a Continue button."
+ },
+ {
+  "i": 29,
+  "u": "https://media.screensdesign.com/avs-pr-640/9505dae193d445d5bf41b78f5a908adb.webp",
+  "a": "Onboarding screen displaying expert opinions and research citations across three informational cards with a Continue button."
+ },
+ {
+  "i": 30,
+  "u": "https://media.screensdesign.com/avs-pr-640/5314b6e7a3d342bab6944ac5d43cc623.webp",
+  "a": "Testimonial screen for the GoTall app featuring a rating modal with five selectable stars, Submit and Cancel buttons, and a bottom Continue button."
+ },
+ {
+  "i": 31,
+  "u": "https://media.screensdesign.com/avs-pr-640/70b0698dfbff45afad817e7436231693.webp",
+  "a": "Feedback modal overlay on a user testimonials page with a five-star rating and a sticky Continue button at the bottom."
+ },
+ {
+  "i": 32,
+  "u": "https://media.screensdesign.com/avs-pr-640/c3a799675f98461fb2290afe9ac07746.webp",
+  "a": "Onboarding testimonial screen displaying user growth results and a 5-star rating summary, with a progress bar and a Continue button."
+ },
+ {
+  "i": 33,
+  "u": "https://media.screensdesign.com/avs-pr-640/8eae334d5f7d46b3817c4ac0b8c3b772.webp",
+  "a": "Onboarding screen for child height goal with a metric unit toggle, 189 cm selected, and a Continue button."
+ },
+ {
+  "i": 34,
+  "u": "https://media.screensdesign.com/avs-pr-640/167bfca0d669497497cbd9d8753ea636.webp",
+  "a": "Onboarding screen displaying a circular gauge highlighting that 20 percent of a child's height is shaped by daily habits, with a neon green Continue button at the bottom."
+ },
+ {
+  "i": 35,
+  "u": "https://media.screensdesign.com/avs-pr-640/c3a1eb62854e40da887e743145a3c64b.webp",
+  "a": "Onboarding screen outlining child growth pillars with a hexagonal icon grid and a green Continue button."
+ },
+ {
+  "i": 36,
+  "u": "https://media.screensdesign.com/avs-pr-640/486618d905bd42ddb6361b0513ffaf74.webp",
+  "a": "GoTall onboarding screen featuring a central hexagonal diagram of growth pillars and a neon-green Continue button."
+ },
+ {
+  "i": 37,
+  "u": "https://media.screensdesign.com/avs-pr-640/32bae27106bc4b3d8d19ff8d0fd0d0d7.webp",
+  "a": "GoTall onboarding screen explaining the height prediction model with a neural network illustration, a help link, and a Continue button."
+ },
+ {
+  "i": 38,
+  "u": "https://media.screensdesign.com/avs-pr-640/3bb9d1128a914dd28fc70dc95c89bba0.webp",
+  "a": "Onboarding screen explaining height prediction accuracy with a 98.7% metric card, institutional logos, and a Continue button."
+ },
+ {
+  "i": 39,
+  "u": "https://media.screensdesign.com/avs-pr-640/3fdfe8ba266149998357d9c37e2603d4.webp",
+  "a": "Onboarding loading screen showing a 100% progress indicator with the message that a personalized child growth program is being crafted."
+ },
+ {
+  "i": 40,
+  "u": "https://media.screensdesign.com/avs-pr-640/d9d0315c9c1b4115b41cc36aa5e4a922.webp",
+  "a": "Onboarding results teaser screen with a central isometric green diamond graphic and a Reveal My Results button against a dark background."
+ },
+ {
+  "i": 41,
+  "u": "https://media.screensdesign.com/avs-pr-640/b9627c9c740a4b4d9831ef32f8208080.webp",
+  "a": "GoTall height prediction paywall screen displaying locked growth metrics, a growth graph, and a See My Potential button."
+ },
+ {
+  "i": 42,
+  "u": "https://media.screensdesign.com/avs-pr-640/50b0ab442859413eaac950e6006512ff.webp",
+  "a": "GoTall paywall screen displaying locked height prediction metrics and a growth graph, with a See My Potential button."
+ },
+ {
+  "i": 43,
+  "u": "https://media.screensdesign.com/avs-pr-640/feb0c140577e4fe7a13841a317c44876.webp",
+  "a": "GoTall subscription paywall comparing yearly and weekly plans, with a user testimonial, special offer toggle, and a Start my journey today button."
+ },
+ {
+  "i": 44,
+  "u": "https://media.screensdesign.com/avs-pr-640/26088d81b1874e4ebc09cdb475380d49.webp",
+  "a": "Dashboard with a projected height display, an onboarding modal overlay with an OK button, and a bottom navigation bar."
+ },
+ {
+  "i": 45,
+  "u": "https://media.screensdesign.com/avs-pr-640/49ac1f64127f41ab8bf57e452780f3ca.webp",
+  "a": "GoTall home dashboard with a modal overlay stating height can be updated once a week and an OK button."
+ },
+ {
+  "i": 46,
+  "u": "https://media.screensdesign.com/avs-pr-640/7bad402aa9104c5ea443e532251f5de9.webp",
+  "a": "GoTall app dashboard with an onboarding modal overlay instructing the user to tap the rocket icon, featuring an OK button."
+ },
+ {
+  "i": 47,
+  "u": "https://media.screensdesign.com/avs-pr-640/623571c31df947e4b8c6e89bb773ea0e.webp",
+  "a": "GoTall onboarding screen featuring a height update tutorial modal, step 5 of 8, with a Next button."
+ },
+ {
+  "i": 48,
+  "u": "https://media.screensdesign.com/avs-pr-640/e6e0aec814a04eaa83bcbd2f47579989.webp",
+  "a": "GoTall onboarding screen displaying a growth prediction card with metrics, explanatory text, and a Next button."
+ },
+ {
+  "i": 49,
+  "u": "https://media.screensdesign.com/avs-pr-640/b894f9dd0a5746a2879d430b6a44a279.webp",
+  "a": "GoTall dashboard with a central modal overlay displaying an educational tip about tracking accuracy and an OK button."
+ },
+ {
+  "i": 50,
+  "u": "https://media.screensdesign.com/avs-pr-640/b04d50844eae45539f9bfca5cd379581.webp",
+  "a": "Dashboard with a circular progress chart and an onboarding modal overlay instructing the user to go to the Grow tab with a Go to Grow button."
+ },
+ {
+  "i": 51,
+  "u": "https://media.screensdesign.com/avs-pr-640/3242712bcdc24203b767a14369380e2a.webp",
+  "a": "Fitness onboarding tutorial with a pulsing rocket button in the center and an instructional modal at the bottom."
+ },
+ {
+  "i": 52,
+  "u": "https://media.screensdesign.com/avs-pr-640/e2e691995f4546f4bf05ea218263cc53.webp",
+  "a": "Fitness dashboard with an exercise plan list, weekly progress summary, horizontal calendar strip, and a Go to training button."
+ },
+ {
+  "i": 53,
+  "u": "https://media.screensdesign.com/avs-pr-640/ac068c585aa841118325338a23c6bf24.webp",
+  "a": "Onboarding screen featuring a central pulsing rocket button and a bottom instructional modal to open nutrition."
+ },
+ {
+  "i": 54,
+  "u": "https://media.screensdesign.com/avs-pr-640/ffc5e9911ae84438911c8ae3f52f3c46.webp",
+  "a": "Nutrition tracking dashboard with an empty meal log, zero percent score, nutrient cards, weekly calendar strip, and an onboarding tooltip with a Next button."
+ },
+ {
+  "i": 55,
+  "u": "https://media.screensdesign.com/avs-pr-640/2cea430cdaaa4faab8cdd3fe922454f7.webp",
+  "a": "Onboarding screen featuring a pulsing rocket button and a bottom instructional modal to unlock the sleep feature."
+ },
+ {
+  "i": 56,
+  "u": "https://media.screensdesign.com/avs-pr-640/0df9c8bd58d54fc5a85fbd684bb76f01.webp",
+  "a": "Dashboard with a weekly sleep chart, a sleep target card, and an onboarding tooltip with a Next button."
+ },
+ {
+  "i": 57,
+  "u": "https://media.screensdesign.com/avs-pr-640/955232e9f1f8473fa5139a6de557c7eb.webp",
+  "a": "GoTall dashboard with a locked height update widget, share button, and a bottom-anchored login streak modal showing a one-day streak and an Okay button."
+ },
+ {
+  "i": 58,
+  "u": "https://media.screensdesign.com/avs-pr-640/9ceda091e8c74d79a25819044aaa14ab.webp",
+  "a": "GoTall home screen displaying a central circular progress gauge, a locked height update feature, a share button, and a bottom navigation bar."
+ },
+ {
+  "i": 59,
+  "u": "https://media.screensdesign.com/avs-pr-640/5040e65e35cb4858a59eb5d96d74293c.webp",
+  "a": "GoTall paywall screen featuring a central product mockup, a No Payment Due Now indicator, and a Try for $0.00 button."
+ },
+ {
+  "i": 60,
+  "u": "https://media.screensdesign.com/avs-pr-640/4efd5498b19c4e47864547efd83a3d58.webp",
+  "a": "Paywall screen offering a free trial with a reminder bell icon, no payment due notice, and a Continue for FREE button."
+ },
+ {
+  "i": 61,
+  "u": "https://media.screensdesign.com/avs-pr-640/1a87c753dfe94882977e387796a33326.webp",
+  "a": "Paywall screen detailing a 3-day free trial subscription timeline with a Start Free Trial button and annual pricing details."
+ },
+ {
+  "i": 62,
+  "u": "https://media.screensdesign.com/avs-pr-640/2473f3af75504d118946d580be8e5647.webp",
+  "a": "App Store purchase confirmation modal for the GoTall app showing the yearly plan and trial terms with a side button confirmation prompt."
+ },
+ {
+  "i": 63,
+  "u": "https://media.screensdesign.com/avs-pr-640/1badb5fc237049de94805c69ce95116a.webp",
+  "a": "Paywall screen with a centered purchase success modal displaying an OK button and a trial timeline in the background."
+ },
+ {
+  "i": 64,
+  "u": "https://media.screensdesign.com/avs-pr-640/bdf66e366bdc446a8ad089dea7b28a82.webp",
+  "a": "GoTall home screen displaying a projected height gauge with a countdown timer, a share button, and a puberty check card."
+ },
+ {
+  "i": 65,
+  "u": "https://media.screensdesign.com/avs-pr-640/66b043b513a743cd9e92abb11f268f70.webp",
+  "a": "Dark-themed GoTall dashboard showing a projected height of 180.2 cm, an 86 percent accuracy metric, a countdown timer, and a Share my height button."
+ }
+]

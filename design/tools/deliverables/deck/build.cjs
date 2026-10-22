@@ -33,7 +33,7 @@ s=pres.addSlide();bg(s,P);
 head(s,'The original: GoTall',{w:4.8,fontSize:30});
 T_(s,'$57.8k',{x:0.6,y:1.5,w:4.6,h:1.5,fontSize:84,bold:true,color:T});
 T_(s,'monthly recurring revenue',{x:0.6,y:3.05,w:4.6,h:0.4,fontSize:18,bold:true});
-T_(s,'A height predictor app. 31-step quiz, then a paywall, then the result.',{x:0.6,y:3.7,w:4.3,h:1.0,fontSize:16});
+T_(s,'A height predictor app. 33 screens of questions and claims, then a paywall. The result stays locked.',{x:0.6,y:3.7,w:4.3,h:1.0,fontSize:16});
 T_(s,'Source: TrustMRR, Superwall-verified, 22 Oct 2026. Weakness counts: our tally of 119 one-to-three-star App Store reviews (approximate).',{x:0.6,y:6.35,w:4.6,h:0.7,fontSize:11,color:M});
 const rows=[['~95','Result locked behind the paywall after a 31-step quiz','"Did the whole questionnaire ... at the last second told me I had to pay"'],
 ['~43','A long, personal quiz before any value','"Tell me up front so that I don\'t waste my time."'],
@@ -114,7 +114,7 @@ phone(s,scr('11-paywall'),0.7,0.8,5.9);
  T_(s,c,{x:4.3,y:y+0.05,w:4.2,h:0.5,fontSize:17,bold:true,valign:'middle'});});
 s.addShape(pres.ShapeType.roundRect,{x:8.8,y:1.5,w:4.0,h:5.3,rectRadius:0.12,fill:{color:K}});
 T_(s,'GoTall instead',{x:9.1,y:1.75,w:3.5,h:0.4,fontSize:20,bold:true,color:T});
-T_(s,['"$0.67/week" framing for a yearly plan','3-minute countdown timer','Paywall before the result','Charges of $35 to $60 reported'].map((t,i,a)=>({text:t,options:{bullet:true,breakLine:i<a.length-1}})),{x:9.1,y:2.4,w:3.5,h:4.0,fontSize:16,color:P,paraSpaceAfter:12});
+T_(s,['"$0.67/week" framing for a yearly plan','"Special offer" countdown (2:59:59)','Paywall before the result','Charges of $35 to $60 reported'].map((t,i,a)=>({text:t,options:{bullet:true,breakLine:i<a.length-1}})),{x:9.1,y:2.4,w:3.5,h:4.0,fontSize:16,color:P,paraSpaceAfter:12});
 s.addNotes("This is our paywall. The yearly price is the biggest text, the free trial end date is written out, and the cancel path is spelled out. The X is visible, there is no countdown, and the one review is labelled as a placeholder. On the right is what GoTall does instead: a weekly price for a yearly plan, a fake timer, and a paywall before the result.");
 
 // 9
@@ -123,19 +123,20 @@ head(s,'Evidence: GoTall vs Measured');
 const ph=t=>({text:t,options:{color:T,bold:true}});
 const hd=t=>({text:t,options:{bold:true,color:P,fill:{color:K},fontSize:16}});
 const rowsT=[[hd('Metric'),hd('GoTall'),hd('Measured')],
- ['Questions to result','31','4'],
+ ['Screens before the paywall','33','11'],
+ ['Questions before the result','25+ (then locked)','4'],
  ['Seconds to result',ph('[measure]'),ph('[measure]')],
- ['Taps to result',ph('[measure]'),ph('[measure]')],
+ ['Taps to result','n/a (locked)','7'],
  ['Result before paywall','No','Yes'],
  ['Clarity test (out of 5)',ph('[x/5]'),ph('[x/5]')]];
-s.addTable(rowsT.map((r,ri)=>r.map((c,ci)=>{const o=typeof c==='string'?{text:c,options:{}}:c;o.options=Object.assign({fontFace:F,fontSize:20,bold:ci>0,color:K,fill:{color:(ci==2&&ri>0)?'EAF8C2':'FFFFFF'},border:{type:'solid',pt:1,color:'E3E0D8'},valign:'middle',margin:[0,0.15,0,0.15]},o.options);return o;})),{x:0.6,y:1.5,w:8.3,colW:[3.7,2.2,2.4],rowH:0.75});
-T_(s,'Orange [measure] = not measured yet. Replace before demo day.',{x:0.6,y:6.15,w:8.3,h:0.35,fontSize:13,bold:true,color:T});
-T_(s,'31 > 4',{x:9.4,y:1.5,w:3.4,h:1.4,fontSize:72,bold:true,color:T});
-T_(s,'questions before you see your result',{x:9.4,y:2.9,w:3.4,h:0.8,fontSize:18,bold:true});
+s.addTable(rowsT.map((r,ri)=>r.map((c,ci)=>{const o=typeof c==='string'?{text:c,options:{}}:c;o.options=Object.assign({fontFace:F,fontSize:20,bold:ci>0,color:K,fill:{color:(ci==2&&ri>0)?'EAF8C2':'FFFFFF'},border:{type:'solid',pt:1,color:'E3E0D8'},valign:'middle',margin:[0,0.15,0,0.15]},o.options);return o;})),{x:0.6,y:1.5,w:8.3,colW:[3.7,2.2,2.4],rowH:0.68});
+T_(s,'Orange [measure] = not measured yet. Replace before demo day.',{x:0.6,y:6.45,w:8.3,h:0.35,fontSize:13,bold:true,color:T});
+T_(s,'33 vs 7',{x:9.4,y:1.5,w:3.4,h:1.4,fontSize:72,bold:true,color:T});
+T_(s,'screens before you see a result (GoTall: still locked)',{x:9.4,y:2.9,w:3.4,h:0.8,fontSize:18,bold:true});
 s.addShape(pres.ShapeType.roundRect,{x:9.4,y:4.2,w:3.4,h:2.3,rectRadius:0.1,fill:{color:K}});
 T_(s,'What we tested',{x:9.65,y:4.4,w:3,h:0.35,fontSize:14,bold:true,color:L});
 T_(s,'Internal QA audit, 22 Oct: every path reaches Home, and the personalisation map was checked screen by screen.',{x:9.65,y:4.85,w:2.95,h:1.55,fontSize:14,color:P});
-s.addNotes("Here is the side-by-side. Questions to result: 31 for GoTall against 4 for us, and our result is shown before the paywall, theirs is not. Seconds, taps and the clarity score are our own measurements from testing both apps with classmates: read the numbers out from the table. Our internal QA audit also found no dead ends in the flow.");
+s.addNotes("Here is the side-by-side. GoTall shows 33 screens before its paywall and the result is still locked; we show the result on screen 7 after 4 questions, free. Screen and tap counts for GoTall come from ScreensDesign's public recording of its onboarding. Seconds, taps and the clarity score are our own measurements from testing both apps with classmates: read the numbers out from the table. Our internal QA audit also found no dead ends in the flow.");
 
 // 10
 s=pres.addSlide();bg(s,K);

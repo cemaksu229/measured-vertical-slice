@@ -1,0 +1,7 @@
+# Regenerable or re-downloadable artefacts (kept on disk, not in git)
+research/competitor-screens/_review-*.png
+research/competitor-screens/_contact-sheet.png
+research/competitor-screens/appstore/
+design/tools/competitor/raw/
+design/tools/competitor/*.html
+design/tools/competitor/rawas/

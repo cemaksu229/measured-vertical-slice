@@ -17,7 +17,7 @@ const fontDir = path.join(root, 'design', 'export', 'fonts');
 
 const D = JSON.parse(readFileSync(dataPath, 'utf8'));
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const MAX_SHOTS = 36;
+const MAX_SHOTS = 44;
 
 // ---- screenshots ----
 const mime = { '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.webp': 'image/webp' };
@@ -42,7 +42,8 @@ const real = files.length > 0;
 
 // ---- helpers ----
 const c = D.counts, m = D.measured;
-const pend = (v, unit = '') => (v === null || v === undefined || v === '' ? `<span class="pend">measure pending</span>` : `${esc(v)}${unit}`);
+const pend = (v, unit = "") => (v === null || v === undefined || v === "" ? `<span class="pend">measure pending</span>` : `${esc(v)}${unit}`);
+const lc = (v) => (String(v ?? "").length > 6 ? " long" : "");
 const TYPE_LABEL = { promise: 'Promise', quiz: 'Quiz', loading: 'Loading', paywall: 'Paywall', result: 'Result', other: 'Other' };
 const tag = (t) => `<span class="tag t-${esc(t)}">${TYPE_LABEL[t] || 'Other'}</span>`;
 const sec = (v) => (v ? '' : '<span class="sec">SECONDARY</span>');
@@ -61,10 +62,10 @@ const cell = (s) => `
     ${tag(s.type)}
     <div class="ct">${esc(s.title || (s.real ? '' : 'Placeholder'))}</div>
     ${s.friction && s.frictionNote ? `<div class="cf">${esc(s.frictionNote)}</div>` : ''}
-    ${s.notes.slice(0, 2).map((n) => `<div class="cn">${esc(n)}</div>`).join('')}
+    ${s.notes.slice(0, 1).map((n) => `<div class="cn">${esc(n)}</div>`).join('')}
   </div>`;
 
-const PER = 18;
+const PER = 22;
 const flowPages = [];
 for (let i = 0; i < Math.max(steps.length, 1); i += PER) flowPages.push(steps.slice(i, i + PER));
 if (flowPages.length > 2) flowPages.length = 2; // keep <= 6 pages total
@@ -76,6 +77,7 @@ const flowHtml = flowPages.map((chunk, pi) => `
       : `No screenshots yet. These frames are a <b>placeholder layout</b> built from the 31-step structure reported by ScreensDesign (secondary source); types are inferred, not observed.`}</p>` : ''}
     <div class="grid">${chunk.map(cell).join('')}</div>
     ${pi === flowPages.length - 1 && steps.length > PER * 2 ? `<p class="small">Showing first ${PER * 2} of ${steps.length} screens.</p>` : ''}
+    <p class="small src2">${esc(D.screensSource || "")}</p>
     <div class="legend"><span><i class="lg red"></i>Friction point</span><span>${tag('quiz')} question</span><span>${tag('paywall')} paywall</span><span>${tag('result')} result</span></div>
   </section>`).join('');
 
@@ -87,7 +89,7 @@ function foot(n, total) { return ''; }
 // ---- cover ----
 const stat = (label, g, me, unit) => `
   <div class="stat"><div class="sl">${label}</div>
-    <div class="sv"><div class="sg"><small>GoTall</small><b>${pend(g)}</b></div><div class="sm"><small>Measured</small><b>${esc(me)}</b></div></div>
+    <div class="sv"><div class="sg"><small>GoTall</small><b class="${lc(g).trim()}">${pend(g)}</b></div><div class="sm"><small>Measured</small><b class="${lc(me).trim()}">${esc(me)}</b></div></div>
   </div>`;
 const cover = `
   <section class="page cover">
@@ -114,7 +116,7 @@ const P = D.promise;
 const used = (v) => v === true ? '<span class="yes">Changes a later screen</span>' : v === false ? '<span class="no">Collected, never used</span>' : '<span class="pend">to verify</span>';
 const promisePage = `
   <section class="page">
-    ${head('Promise and personalisation', 'What screen 1 promises, and which questions matter')}
+    ${head('Promise and personalisation', 'What screen 1 promises, and what matters')}
     <div class="two">
       <div>
         ${steps[0]?.real ? `<div class="big"><img src="${steps[0].img}"></div>` : `<div class="big"><div class="ph"><div class="phn">1</div><div class="pht">Screenshot slot: screen 1 (01.png)</div></div></div>`}
@@ -191,7 +193,7 @@ ${font('GS', 'GeneralSans-Regular.otf', 400)}${font('GS', 'GeneralSans-Medium.ot
 body{font-family:GS,sans-serif;color:var(--ink);background:var(--paper);font-size:9.5pt;line-height:1.4}
 .page{width:210mm;height:297mm;padding:16mm 15mm 14mm;overflow:hidden;page-break-after:always;position:relative;background:var(--paper)}
 .page:last-child{page-break-after:auto}
-h1{font-family:Clash;font-weight:600;font-size:54pt;line-height:.98;letter-spacing:-.02em}
+h1{font-family:Clash;font-weight:600;font-size:44pt;line-height:.98;letter-spacing:-.02em}
 h2{font-family:Clash;font-weight:600;font-size:21pt;line-height:1.1;letter-spacing:-.01em;margin-bottom:8px}
 h3{font-family:Clash;font-weight:600;font-size:12pt;margin:14px 0 6px}
 .kick{font-size:7.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin-bottom:3px}
@@ -201,7 +203,7 @@ header{border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:10px}
 .pend{color:var(--red);font-weight:600;font-size:.85em}
 .sec{display:inline-block;margin-left:6px;font-size:6pt;font-weight:600;letter-spacing:.08em;border:1px solid var(--muted);color:var(--muted);padding:0 3px;border-radius:3px;vertical-align:middle}
 .src{font-size:7pt;color:var(--muted)}
-.cover{display:flex;flex-direction:column;gap:11px}
+.cover{display:flex;flex-direction:column;gap:8px}
 .cv-top{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--ink);padding-bottom:6px}
 .brand{font-family:Clash;font-weight:600;font-size:15pt}
 .vs{color:var(--brand)}
@@ -211,14 +213,14 @@ header{border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:10px}
 .stat{background:#fff;border:1px solid var(--line);border-radius:10px;padding:8px 12px}
 .sl{font-size:7.5pt;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
 .sv{display:flex;gap:14px}.sv>div{flex:1}.sv small{display:block;font-size:7pt;color:var(--muted)}
-.sv b{font-family:Clash;font-weight:600;font-size:17pt}
+.sv b{font-family:Clash;font-weight:600;font-size:17pt;display:inline-block;line-height:1.15}.sv b.long{font-size:8.5pt;font-family:GS;font-weight:600;line-height:1.25}
 .sm b{background:var(--lime);padding:0 6px;border-radius:5px}
 .sg .pend{font-family:GS;font-size:9pt}
-.verdict{background:var(--ink);color:var(--paper);border-radius:10px;padding:12px 14px;font-family:Clash;font-weight:500;font-size:13pt;line-height:1.25;margin-top:auto}
+.verdict{background:var(--ink);color:var(--paper);border-radius:10px;padding:10px 14px;font-family:Clash;font-weight:500;font-size:11.5pt;line-height:1.25;margin-top:auto}
 .verdict .kick{color:var(--lime)!important}
 .verdict.ours{background:var(--lime);color:var(--ink);font-family:GS;font-size:10pt;font-weight:500;margin-top:14px}
 .verdict.ours .kick{color:var(--ink)!important}
-.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:9px 8px}
+.grid{display:grid;grid-template-columns:repeat(8,1fr);gap:8px 6px}
 .cell{min-width:0}
 .shot{position:relative;aspect-ratio:9/19;border:1px solid var(--ink);border-radius:6px;overflow:hidden;background:#fff;margin-bottom:3px}
 .shot.fr{border:2px solid var(--red)}
@@ -230,19 +232,20 @@ header{border-bottom:2px solid var(--ink);padding-bottom:6px;margin-bottom:10px}
 .pht{font-size:6pt;color:var(--muted)}
 .tag{display:inline-block;font-size:6pt;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:0 4px;border-radius:3px;background:var(--line);color:var(--ink)}
 .t-paywall{background:var(--brand);color:#fff}.t-result{background:var(--lime)}.t-quiz{background:#fff;border:1px solid var(--ink)}.t-loading{background:var(--ink);color:var(--paper)}
-.ct{font-size:6.8pt;font-weight:600;line-height:1.2;margin-top:2px}
-.cf{font-size:6.5pt;color:var(--red);font-weight:600;line-height:1.2}
-.cn{font-size:6.3pt;color:var(--muted);line-height:1.2}
+.ct{font-size:6pt;font-weight:600;line-height:1.2;margin-top:2px}
+.cf{font-size:5.6pt;color:var(--red);font-weight:600;line-height:1.2}
+.cn{font-size:5.4pt;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;color:var(--muted);line-height:1.2}
+.src2{position:absolute;bottom:18mm;left:15mm;right:15mm}
 .legend{position:absolute;bottom:12mm;left:15mm;display:flex;gap:14px;font-size:7.5pt;align-items:center}
 .lg{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px;vertical-align:middle}.lg.red{background:var(--red)}
-.two{display:grid;grid-template-columns:62mm 1fr;gap:16px;align-items:start}
+.two{display:grid;grid-template-columns:46mm 1fr;gap:16px;align-items:start}
 .big{aspect-ratio:9/19;border:1px solid var(--ink);border-radius:10px;overflow:hidden;background:#fff}
 .big img{width:100%;height:100%;object-fit:cover}
 .big .ph .phn{font-size:34pt}.big .pht{font-size:8pt}
 .quote{font-family:Clash;font-weight:500;font-size:14pt;line-height:1.2;margin:2px 0 10px}
 table{width:100%;border-collapse:collapse;font-size:8.5pt}
 th{text-align:left;font-size:7pt;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);border-bottom:2px solid var(--ink);padding:3px 6px 3px 0}
-td{border-bottom:1px solid var(--line);padding:5px 6px 5px 0;vertical-align:top}
+td{border-bottom:1px solid var(--line);padding:3px 6px 3px 0;vertical-align:top}
 .yes{background:var(--lime);padding:0 4px;border-radius:3px;font-weight:600;font-size:8pt}
 .no{color:var(--red);font-weight:600}
 .facts td{font-size:8.3pt}.fl{font-weight:600;width:30%}
