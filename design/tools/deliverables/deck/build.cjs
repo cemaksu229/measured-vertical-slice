@@ -88,7 +88,7 @@ T_(s,'LIVE DEMO',{x:0.8,y:1.8,w:11.7,h:1.8,fontSize:96,bold:true,color:T});
 T_(s,'A classmate does the onboarding cold',{x:0.8,y:4.0,w:11.7,h:1.2,fontSize:44,bold:true,color:P});
 s.addShape(pres.ShapeType.rect,{x:0.8,y:6.0,w:11.7,h:0.12,fill:{color:L}});
 for(let i=0;i<=40;i++)s.addShape(pres.ShapeType.rect,{x:0.8+i*0.2925-0.01,y:6.12,w:0.02,h:i%5==0?0.4:0.22,fill:{color:L}});
-s.addNotes("Hand the phone to a classmate who has never seen the app. Say nothing; let them tap through while we narrate: four questions, the free result, the plan and the paywall. Point out the range on the result and the price box. If the phone fails, play the screen recording.");
+s.addNotes("BACKUP: if the live demo fails (no connection, Expo error), play measured_app_video.mp4 from the Measured-Teslimat folder instead. Hand the phone to a classmate who has never seen the app. Say nothing; let them tap through while we narrate: four questions, the free result, the plan and the paywall. Point out the range on the result and the price box. If the phone fails, play the screen recording.");
 
 // 7
 s=pres.addSlide();bg(s,P);
