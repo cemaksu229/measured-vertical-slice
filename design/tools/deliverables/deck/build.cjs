@@ -24,7 +24,7 @@ let s=pres.addSlide();bg(s,K);
 T_(s,'MEASURED',{x:0.7,y:0.8,w:7,h:0.4,fontSize:16,bold:true,color:T,charSpacing:6});
 T_(s,'Your honest adult height range in 60 seconds',{x:0.7,y:1.6,w:7,h:3.0,fontSize:50,bold:true,color:P});
 T_(s,'4 questions. A free result before any paywall.',{x:0.7,y:4.9,w:7,h:0.5,fontSize:20,color:L});
-T_(s,'[Team names]',{x:0.7,y:6.3,w:6,h:0.4,fontSize:18,bold:true,color:T});
+T_(s,'Cem Aksu  ·  Pınar Işıl Şahin  ·  Batu Öncel',{x:0.7,y:6.3,w:6,h:0.4,fontSize:18,bold:true,color:T});
 phone(s,scr('01-promise'),8.2,0.9,5.7,true);phone(s,scr('07-reveal'),10.75,1.5,5.2,true);
 s.addNotes("Hi, we are [team names]. Our app is Measured, an honest adult height predictor. The promise is on the screen: your adult height range in 60 seconds, with the result shown before any paywall. In the next eight minutes we show what we copied, what we changed, and then a classmate runs the app live.");
 
@@ -131,13 +131,13 @@ const rowsT=[[hd('Metric'),hd('GoTall'),hd('Measured')],
  ['Result before paywall','No','Yes'],
  ['Clarity test (out of 5)',ph('[x/5]'),ph('[x/5]')]];
 s.addTable(rowsT.map((r,ri)=>r.map((c,ci)=>{const o=typeof c==='string'?{text:c,options:{}}:c;o.options=Object.assign({fontFace:F,fontSize:20,bold:ci>0,color:K,fill:{color:(ci==2&&ri>0)?'EAF8C2':'FFFFFF'},border:{type:'solid',pt:1,color:'E3E0D8'},valign:'middle',margin:[0,0.15,0,0.15]},o.options);return o;})),{x:0.6,y:1.5,w:8.3,colW:[3.7,2.2,2.4],rowH:0.6});
-T_(s,'est. = estimated from screen count (~4.5 s per screen); replace with stopwatch times. Orange = still to test.',{x:0.6,y:6.45,w:8.3,h:0.35,fontSize:13,bold:true,color:T});
+T_(s,'est. = estimated from the screen count at ~4.5 s per screen. Orange = still to test.',{x:0.6,y:6.45,w:8.3,h:0.35,fontSize:13,bold:true,color:T});
 T_(s,'33 vs 7',{x:9.4,y:1.5,w:3.4,h:1.4,fontSize:72,bold:true,color:T});
 T_(s,'screens before you see a result (GoTall: still locked)',{x:9.4,y:2.9,w:3.4,h:0.8,fontSize:18,bold:true});
 s.addShape(pres.ShapeType.roundRect,{x:9.4,y:4.2,w:3.4,h:2.3,rectRadius:0.1,fill:{color:K}});
 T_(s,'What we tested',{x:9.65,y:4.4,w:3,h:0.35,fontSize:14,bold:true,color:L});
 T_(s,'Internal QA audit, 22 Oct: every path reaches Home, and the personalisation map was checked screen by screen.',{x:9.65,y:4.85,w:2.95,h:1.55,fontSize:14,color:P});
-s.addNotes("Here is the side-by-side. GoTall shows 33 screens before its paywall and the result is still locked; we show the result on screen 7 after 4 questions, free. Screen and tap counts for GoTall come from ScreensDesign's public recording of its onboarding. The seconds marked est. are estimates from the screen count; if you have stopwatch times, say those instead. The clarity score comes from showing only the first screen of each app to five classmates. Our internal QA audit also found no dead ends in the flow.");
+s.addNotes("Here is the side-by-side. GoTall shows 33 screens before its paywall and the result is still locked; we show the result on screen 7 after 4 questions, free. Screen and tap counts for GoTall come from ScreensDesign's public recording of its onboarding. The seconds marked est. are estimates from the screen count at about four and a half seconds per screen; we say so openly. The clarity score comes from showing only the first screen of each app to five classmates. Our internal QA audit also found no dead ends in the flow.");
 
 // 10
 s=pres.addSlide();bg(s,K);

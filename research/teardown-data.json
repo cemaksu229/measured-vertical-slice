@@ -10,7 +10,7 @@
   },
   "screensSource": "Screens 01-44: ScreensDesign public stills (watermarked, 640 px, older build than store v16.1.0), fetched 22 Oct 2026. See research/competitor-screens/SOURCE.md.",
   "counts": {
-    "_help": "Screens/taps counted from the ScreensDesign stills; seconds are estimates from the screen count until timed with a stopwatch.",
+    "_help": "Screens/taps counted from the ScreensDesign stills; seconds are estimates from the screen count (~4.5 s per screen).",
     "screensToResult": "Never shown before paying (locked teaser at screen 42)",
     "tapsToResult": "n/a - result locked",
     "secondsToResult": "Locked (never shown free)",
@@ -25,7 +25,7 @@
     "tapsToResult": "7 (with default values)",
     "secondsToResult": "~45 est.",
     "screensToPaywall": 11,
-    "note": "Flow: promise, goal, about, height, parents, building, reveal (7 screens, 4 questions) then habits, plan, priming, paywall. Free result before the paywall. Taps counted on the built app with default picker values; seconds are estimates (~4.5 s per screen) until timed with a stopwatch."
+    "note": "Flow: promise, goal, about, height, parents, building, reveal (7 screens, 4 questions) then habits, plan, priming, paywall. Free result before the paywall. Taps counted on the built app with default picker values; seconds are estimates (~4.5 s per screen)."
   },
   "verdict": "GoTall shows 33 screens of questions, claims, a tracking prompt and an App Store rating request before anything is revealed, then locks the result behind a 'special offer' paywall. Measured shows an honest range after 4 questions, free.",
   "verdictFallback": "GoTall needs about 31 steps and puts the paywall between the user and the answer. Measured gives the answer after 4 questions, free, and shows the full price.",
