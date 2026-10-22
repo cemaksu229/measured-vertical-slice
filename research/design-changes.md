@@ -19,7 +19,7 @@
 | Our research said GoTall uses a "3-minute countdown" | Checking the actual paywall still showed "2:59:59" | Corrected everywhere to a "Special offer" countdown (2:59:59) |
 
 ## Clarity test (23 Oct 2026)
-Five classmates saw only the first content screen of each app (GoTall screen 03, Measured Promise) for about 5 seconds and were asked "What does this app do?". Correct = predicts your adult height. **GoTall 2/5, Measured 5/5.** Order was alternated between people.
+Five classmates saw only the first content screen of each app (GoTall screen 03, Measured Promise) and were asked "What does this app do?". Correct = predicts your adult height. **GoTall 2/5, Measured 5/5.**
 
 ## User tests (to be added by the team)
 | Who (role, age group) | What confused them | What we changed |

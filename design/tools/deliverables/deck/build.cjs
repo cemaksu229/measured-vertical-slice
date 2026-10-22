@@ -137,7 +137,7 @@ T_(s,'screens before you see a result (GoTall: still locked)',{x:9.4,y:2.9,w:3.4
 s.addShape(pres.ShapeType.roundRect,{x:9.4,y:4.2,w:3.4,h:2.3,rectRadius:0.1,fill:{color:K}});
 T_(s,'What we tested',{x:9.65,y:4.4,w:3,h:0.35,fontSize:14,bold:true,color:L});
 T_(s,'Internal QA audit, 22 Oct: every path reaches Home, and the personalisation map was checked screen by screen.',{x:9.65,y:4.85,w:2.95,h:1.55,fontSize:14,color:P});
-s.addNotes("Here is the side-by-side. GoTall shows 33 screens before its paywall and the result is still locked; we show the result on screen 7 after 4 questions, free. Screen and tap counts for GoTall come from ScreensDesign's public recording of its onboarding. The seconds marked est. are estimates from the screen count at about four and a half seconds per screen; we say so openly. For clarity we showed five classmates only the first content screen of each app for about five seconds and asked what the app does: two of five got GoTall right, all five got Measured right. Our internal QA audit also found no dead ends in the flow.");
+s.addNotes("Here is the side-by-side. GoTall shows 33 screens before its paywall and the result is still locked; we show the result on screen 7 after 4 questions, free. Screen and tap counts for GoTall come from ScreensDesign's public recording of its onboarding. The seconds marked est. are estimates from the screen count at about four and a half seconds per screen; we say so openly. For clarity we showed five classmates only the first content screen of each app and asked what the app does: two of five got GoTall right, all five got Measured right. Our internal QA audit also found no dead ends in the flow.");
 
 // 10
 s=pres.addSlide();bg(s,K);
