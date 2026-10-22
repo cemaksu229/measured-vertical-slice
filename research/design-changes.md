@@ -21,7 +21,9 @@
 ## Clarity test (23 Oct 2026)
 Five classmates saw only the first content screen of each app (GoTall screen 03, Measured Promise) and were asked "What does this app do?". Correct = predicts your adult height. **GoTall 2/5, Measured 5/5.**
 
-## User tests (to be added by the team)
-| Who (role, age group) | What confused them | What we changed |
+## Device test by the team (23 Oct 2026)
+| Who | What we found on the phone | What we changed |
 |---|---|---|
-| | | |
+| Team member, own phone (Expo Go) | Dragging the ruler and releasing outside it made the ruler oscillate and fly to the end of the scale | Ignore delayed value echoes while dragging/settling, cap the fling at 12 steps, snap on cancelled touches. **Re-tested on the phone: no more jitter.** |
+| Team member, own phone | Sex options read "Boy / Girl", which felt wrong for older users and the parent path | Changed to "Male / Female" |
+| Team member, own phone | Age picker stopped at 20 | Extended to 25; 18+ shows "growth likely complete" |
