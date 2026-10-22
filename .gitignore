@@ -5,3 +5,7 @@ research/competitor-screens/appstore/
 design/tools/competitor/raw/
 design/tools/competitor/*.html
 design/tools/competitor/rawas/
+
+# Course material kept locally, never published
+Vertical_Slice_Project_Brief.pdf
+hocan*nistekleri.txt
