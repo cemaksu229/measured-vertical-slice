@@ -1,0 +1,22 @@
+// QA-only web build into design/tools/qa/.web-dist (does not touch the shared .web-dist).
+import { spawnSync } from 'node:child_process';
+import { cpSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+const here = path.dirname(fileURLToPath(import.meta.url));
+const root = path.resolve(here, '..', '..', '..');
+const mobile = path.join(root, 'mobile');
+const dist = path.join(here, '.web-dist');
+const shadow = path.join(here, '.web-src');
+rmSync(shadow, { recursive: true, force: true });
+mkdirSync(shadow, { recursive: true });
+for (const f of ['package.json', 'tsconfig.json', 'app.json']) cpSync(path.join(mobile, f), path.join(shadow, f));
+for (const d of ['src', 'assets']) cpSync(path.join(mobile, d), path.join(shadow, d), { recursive: true });
+symlinkSync(path.join(mobile, 'node_modules'), path.join(shadow, 'node_modules'), 'junction');
+const app = JSON.parse(readFileSync(path.join(shadow, 'app.json'), 'utf8'));
+app.expo.web = { ...(app.expo.web || {}), output: 'single' };
+writeFileSync(path.join(shadow, 'app.json'), JSON.stringify(app, null, 2));
+rmSync(dist, { recursive: true, force: true });
+const r = spawnSync('npx', ['expo', 'export', '--platform', 'web', '--output-dir', dist], { cwd: shadow, stdio: 'inherit', shell: true, env: { ...process.env, CI: '1' } });
+rmSync(path.join(shadow, 'node_modules'), { recursive: true, force: true });
+process.exit(r.status ?? 1);

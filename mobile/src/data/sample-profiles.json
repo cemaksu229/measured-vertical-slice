@@ -1,0 +1,12 @@
+[
+  {"id":"p1","name":"Liam Carter","sex":"male","ageYears":11,"currentHeightCm":146,"motherHeightCm":172,"fatherHeightCm":178,"answers":{"goal":"reach-potential","sleepHours":"<7","activity":"low","diet":"low"}},
+  {"id":"p2","name":"Sofia Alvarez","sex":"female","ageYears":12,"currentHeightCm":153,"motherHeightCm":163,"fatherHeightCm":170,"answers":{"goal":"know-final-height","sleepHours":"7-8","activity":"medium","diet":"ok"}},
+  {"id":"p3","name":"Noah Kim","sex":"male","ageYears":14,"currentHeightCm":166,"motherHeightCm":160,"fatherHeightCm":175,"answers":{"goal":"reach-potential","sleepHours":"<7","activity":"medium","diet":"ok"}},
+  {"id":"p4","name":"Ava Johnson","sex":"female","ageYears":10,"currentHeightCm":138,"motherHeightCm":165,"fatherHeightCm":168,"answers":{"goal":"track-child","sleepHours":"9+","activity":"high","diet":"good"}},
+  {"id":"p5","name":"Ethan Brooks","sex":"male","ageYears":16,"currentHeightCm":177,"motherHeightCm":168,"fatherHeightCm":182,"answers":{"goal":"know-final-height","sleepHours":"7-8","activity":"low","diet":"ok"}},
+  {"id":"p6","name":"Mia Rossi","sex":"female","ageYears":15,"currentHeightCm":158,"motherHeightCm":158,"fatherHeightCm":172,"answers":{"goal":"reach-potential","sleepHours":"7-8","activity":"medium","diet":"low"}},
+  {"id":"p7","name":"Lucas Meyer","sex":"male","ageYears":13,"currentHeightCm":158,"motherHeightCm":166,"fatherHeightCm":180,"answers":{"goal":"reach-potential","sleepHours":"9+","activity":"high","diet":"good"}},
+  {"id":"p8","name":"Zara Khan","sex":"female","ageYears":13,"currentHeightCm":151,"motherHeightCm":156,"fatherHeightCm":167,"answers":{"goal":"track-child","sleepHours":"<7","activity":"low","diet":"ok"}},
+  {"id":"p9","name":"Oliver Grant","sex":"male","ageYears":10,"currentHeightCm":137,"motherHeightCm":170,"fatherHeightCm":176,"answers":{"goal":"track-child","sleepHours":"7-8","activity":"medium","diet":"good"}},
+  {"id":"p10","name":"Emma Dubois","sex":"female","ageYears":17,"currentHeightCm":168,"motherHeightCm":170,"fatherHeightCm":181,"answers":{"goal":"know-final-height","sleepHours":"<7","activity":"medium","diet":"low"}}
+]
