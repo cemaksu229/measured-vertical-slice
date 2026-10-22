@@ -1,0 +1,92 @@
+{
+  "_help": "Edit this file, then run: cd design/tools && npm run teardown. null = 'measure pending'. Facts with verified:false come from secondary sources (ScreensDesign, TrustMRR, Stork, reviews) and are shown with a SECONDARY tag until you set verified:true after checking in the app yourself.",
+  "app": {
+    "name": "GoTall - Height Predictor",
+    "publisher": "Grow Labs LLC",
+    "appStoreUrl": "https://apps.apple.com/us/app/id6747467975",
+    "rating": "4.6 / 5 from 6.8K ratings (store); recent review feed is mostly 1-star",
+    "revenue": "MRR $57.8k, 17.6k subs - TrustMRR (Superwall-verified), fetched 22 Oct 2026",
+    "ours": "Measured"
+  },
+  "counts": {
+    "_help": "From your stopwatch run, fresh install to the first screen that shows the height result / the paywall. Numbers or null.",
+    "screensToResult": null,
+    "tapsToResult": null,
+    "secondsToResult": null,
+    "screensToPaywall": null,
+    "tapsToPaywall": null,
+    "secondsToPaywall": null,
+    "reportedFlowSteps": 31,
+    "reportedFlowSource": "ScreensDesign (secondary): 31 onboarding steps, paywall before the reveal"
+  },
+  "measured": {
+    "screensToResult": 7,
+    "tapsToResult": 8,
+    "secondsToResult": "< 60",
+    "screensToPaywall": 11,
+    "note": "Flow: promise, goal, about, height, parents, building, reveal (7 screens, 4 questions) then habits, plan, priming, paywall. Free result before the paywall. Source: design/measured-slice-spec.md sections 1-2 and 6. Taps are a design estimate until timed in the demo."
+  },
+  "verdict": null,
+  "verdictFallback": "GoTall needs about 31 steps and puts the paywall between the user and the answer. Measured gives the answer after 4 questions, free, and shows the full price.",
+  "placeholderFlow": {
+    "_help": "Layout stand-in used only when a screenshot is missing. Types are inferred from ScreensDesign (secondary), not observed by us.",
+    "total": 31,
+    "steps": [
+      { "title": "Promise / welcome", "type": "promise" },
+      { "title": "Personal data: genetics, lifestyle, habits", "type": "quiz", "count": 27 },
+      { "title": "Building your plan", "type": "loading" },
+      { "title": "Paywall (3-day trial, yearly)", "type": "paywall" },
+      { "title": "Trial timeline explainer", "type": "other" }
+    ]
+  },
+  "annotations": [
+    { "file": "01.png", "title": "", "type": "promise", "notes": [], "friction": false, "frictionNote": "" }
+  ],
+  "annotationsHelp": "One object per screenshot file (01.png ...). type: promise|quiz|loading|paywall|result|other. friction:true draws a red badge with frictionNote. Missing entries fall back to the placeholder structure.",
+  "promise": {
+    "headline": "",
+    "benefitOrFeature": "pending",
+    "benefitOrFeatureNote": "Screen 1 not yet captured. Judge: does it promise an outcome (benefit) or describe the app (feature)? Store subtitle is '#1 height predictor & maxxer' (feature plus status claim).",
+    "askedVsUsed": [
+      { "question": "Parent heights", "changesLater": null, "note": "Reviewers report being asked, even about absent fathers (secondary)" },
+      { "question": "Age / birth date", "changesLater": null, "note": "" },
+      { "question": "Sleep, food, activity", "changesLater": null, "note": "Store description says used for the plan (secondary)" },
+      { "question": "Puberty stage quiz", "changesLater": true, "note": "Answers later referenced by AI Coach (ScreensDesign, secondary)" },
+      { "question": "Photo of yourself", "changesLater": null, "note": "Reported by reviewers (secondary)" }
+    ],
+    "measuredAnswer": "Promise states the cost up front: '4 questions - about 60 seconds'. All 4 answers change a later screen (unit, silhouettes, range width, plan order). See slice spec section 3."
+  },
+  "paywall": {
+    "screenshotFile": "paywall.png",
+    "facts": [
+      { "label": "Position", "value": "After the quiz, before the result is revealed", "verified": false, "source": "ScreensDesign; reviews" },
+      { "label": "Trial", "value": "3-day free trial, converts to yearly", "verified": false, "source": "ScreensDesign" },
+      { "label": "Headline price framing", "value": "Yearly shown as $0.67/week", "verified": false, "source": "ScreensDesign; reviewers report $35-$60 charged at once" },
+      { "label": "Plans / prices", "value": "IAP list: Yearly $59.99 / $34.99 / $9.99 variants, Weekly $1.99-$5.99, GoTall Access $4.99", "verified": false, "source": "App Store IAP list (does not say which is shown)" },
+      { "label": "Urgency", "value": "3-minute countdown timer", "verified": false, "source": "ScreensDesign" },
+      { "label": "Social proof", "value": "Testimonial + star rating", "verified": false, "source": "ScreensDesign" },
+      { "label": "Close button", "value": null, "verified": false, "source": "measure: is there an X, how visible, where, any delay?" },
+      { "label": "Discount on dismiss", "value": "A later 'discount' offer reported", "verified": false, "source": "Review (us, 1 star)" },
+      { "label": "Fear copy", "value": "'Costs of being short' / dating claims reported", "verified": false, "source": "Review paraphrase (gb, 1 star)" }
+    ],
+    "darkPatterns": [
+      "Result withheld until payment (bait and switch, per reviewers)",
+      "Fake urgency: 3-minute countdown",
+      "Price anchoring: $0.67/week hides the lump-sum yearly charge",
+      "Trial presented as a free subscription that auto-converts to a full year",
+      "Fear and status copy aimed at an audience that includes minors (age rating 9+)"
+    ],
+    "measuredAnswer": "Measured paywall: visible X, full price largest ($29.99 / year), trial end date and 'Today: $0', in-app cancel path, no countdown, and the result is already free."
+  },
+  "reviews": {
+    "sample": "150 reviews fetched via Apple RSS (us/gb/ca/au), 119 are 1-3 star. Keyword tallies overlap, approximate. Fetched 22 Oct 2026. Secondary source.",
+    "themes": [
+      { "theme": "Result locked behind paywall after long quiz", "count": 95, "quote": "I did the whole questionnaire and wanted to get my results but at the last second told me I had to pay (ca, 1 star)", "answer": "Free result after 4 questions; the paywall only gates the plan." },
+      { "theme": "Time wasted on long personal questionnaire", "count": 43, "quote": "Tell me up front so that I don't waste my time. (us, 1 star)", "answer": "'4 questions - about 60 seconds' on screen 1, a progress bar, the rest optional after the result." },
+      { "theme": "Billing surprises", "count": 19, "quote": "It said $0.67 per week but it really charged me $35. (us, 1 star)", "answer": "Full billed amount first, trial end date, 2-day reminder, cancel path shown." },
+      { "theme": "Distrust of accuracy", "count": 13, "quote": "I typed in a dream height of 185cm and the app says that the probability is very low. However the coach is predicting a height of 186cm. (au, 2 star)", "answer": "One model, a range with stated error (+/-8.5 cm), method explained on the reveal." },
+      { "theme": "Privacy / sensitive inputs", "count": 9, "quote": "Not fair how it asks me how tall my dad is when I've never met the guy (gb, 1 star)", "answer": "'I don't know' for each parent, the range widens and says so; no photo, no account." },
+      { "theme": "Feature bugs and gaps", "count": 5, "quote": "What happened to the sleep score? It stopped going after week 13 (us, 3 star)", "answer": "Small scope: a plan checklist that works; no referral or scoring promises." }
+    ]
+  }
+}

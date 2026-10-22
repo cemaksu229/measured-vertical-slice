@@ -5,6 +5,7 @@
   "scripts": {
     "stylesheet": "tsx stylesheet.ts",
     "capture": "node capture.mjs",
+    "teardown": "node deliverables/teardown.mjs",
     "all": "tsx stylesheet.ts && node capture.mjs"
   },
   "devDependencies": {

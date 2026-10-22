@@ -1,0 +1,9 @@
+@font-face{font-family:Clash;font-weight:600;src:url("../../export/fonts/ClashDisplay-Semibold.otf")}
+@font-face{font-family:Clash;font-weight:500;src:url("../../export/fonts/ClashDisplay-Medium.otf")}
+@font-face{font-family:GS;font-weight:400;src:url("../../export/fonts/GeneralSans-Regular.otf")}
+@font-face{font-family:GS;font-weight:500;src:url("../../export/fonts/GeneralSans-Medium.otf")}
+@font-face{font-family:GS;font-weight:600;src:url("../../export/fonts/GeneralSans-Semibold.otf")}
+:root{--paper:#F6F4EF;--ink:#141414;--tang:#FF5A1F;--lime:#C6F25B;--mute:#6B6B6B;--line:#E3E0D8;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:GS,sans-serif;-webkit-print-color-adjust:exact}
+h1,h2,h3,.d{font-family:Clash,sans-serif;font-weight:600;letter-spacing:-.01em}

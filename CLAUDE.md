@@ -69,6 +69,7 @@ Ana agent her alt görev için hangi aracın gerektiğine karar verir ve agent p
 - **Önemli adımlar** (her ekranın tamamlanması, paywall, aha anı) bitince opus/high bir inceleme agenti veya `code-review` çalıştırılır.
 - **İçerik:** Lorem ipsum veya placeholder yok, testimonial'lar etiketli, copy İngilizce, kısa ve ikinci tekil şahıs.
 - Ana agent, alt agentın "bitti" demesini kanıt saymaz. Değişen dosyaları veya diff'i kendisi kontrol eder.
+- Her alt agent prompt'una şu yasak açıkça yazılır: **sistem genelinde program kurulmaz** (winget, choco, msi, global npm). Gerekirse agent durur ve bunu ana agente bildirir. Ana agent da kullanıcıdan onay ister. Proje klasöründeki yerel `npm` bağımlılıkları bu yasağa dahil değildir. (Ders: E1 agentı onaysız LibreOffice kurdu, 22.10.2026.)
 
 ### Token tasarrufu (kaliteden ödün vermeden)
 - **Gereksiz agent yok:** 1–2 dosyalık veya birkaç dakikalık işleri ana agent kendisi yapar. Agent sadece gerçekten bağımsız, büyük veya paralel yürüyebilecek işler için başlatılır.

@@ -31,7 +31,7 @@ type Plan = 'yearly' | 'weekly';
 
 export default function PaywallScreen() {
   const router = useRouter();
-  const { colors, spacing, radii } = useTheme();
+  const { colors, spacing } = useTheme();
   const goal = useAppStore((s) => s.goal);
   const copy = useCopy();
   const features = ['Full 4-week plan', 'Daily habit tracker', `Monthly re-check of ${copy.possessive} prediction`];
@@ -92,10 +92,6 @@ export default function PaywallScreen() {
           </Body>
           <Body>{plan === 'yearly' ? `On ${trialEndDate(7)}: $29.99` : 'Renews weekly at $3.99'}</Body>
           <Caption>{CANCEL_LINE}</Caption>
-        </Card>
-        <Card style={{ gap: spacing.xs, padding: spacing.md, borderRadius: radii.md }}>
-          <Caption style={{ fontFamily: fontFamily.bodySemibold }}>Placeholder review</Caption>
-          <Body>Placeholder text for a future user review.</Body>
         </Card>
       </ScrollView>
       <View style={{ gap: spacing.sm }}>
