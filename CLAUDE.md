@@ -106,8 +106,10 @@ Ana agent her alt görev için hangi aracın gerektiğine karar verir ve agent p
 - Mock veriler `data/` klasöründe JSON olarak durur. Plan motoru basit kurallarla çalışır.
 
 ## Git
-- Proje bir git reposunda tutulur. Repoyu ilk kod adımında, onay alarak kurarım.
-- **Commit'i sadece kullanıcı isteyince atarım. Push yapmam.** Commit mesajları İngilizce olur.
+- Proje bir git reposunda tutulur. Uzak repo: [cemaksu229/measured-vertical-slice](https://github.com/cemaksu229/measured-vertical-slice) (**private**, `master` dalı).
+- **Commit ve push, kullanıcı istediğinde ya da masaüstü ile laptop arasında senkron için yapılır.** Kullanıcının onayladığı ve doğrulanmış (tsc, lint, gerekiyorsa yeniden üretilmiş export'lar) bir iş bitince commit atılır ve `origin/master`'a push edilir. Yarım kalmış veya doğrulanmamış iş push edilmez.
+- Force push, geçmişi yeniden yazma ve dal silme yapılmaz. Bunlar her zaman ayrıca onay gerektirir. Repoyu herkese açık yapmak da kullanıcı kararıdır, çünkü içinde hocanın gizli brief PDF'i var.
+- Başka bir bilgisayarda çalışmaya başlamadan önce `git pull` yapılır. Commit mesajları İngilizce olur.
 
 ## Yapmayacaklarım
 - Onay almadan paket kurmak, dosya silmek, onaylanmamış ekran eklemek, kapsam dışı özellik eklemek.
