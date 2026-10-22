@@ -61,7 +61,7 @@ Ana agent her alt görev için hangi aracın gerektiğine karar verir ve agent p
 | Büyük dosya veya log okuma | `headroom:peek` / `headroom:headroom` |
 | Web sayfası üzerinde gezinme ve ekran görüntüsü | `claude-in-chrome` skill'i |
 
-- **Figma MCP şu an bağlı değil.** Tasarımlar ekran görüntüsü ve token listesi olarak verilir. Figma MCP gerekli görülürse kurulumu kullanıcıya önerilir, onaysız kurulmaz.
+- **Figma MCP bağlı** (uzak sunucu, `.mcp.json`, 23.10.2026). Dosya: [Measured vs GoTall](https://www.figma.com/design/CI4KAerQamr8blWOUNMBEp/Measured-vs-GoTall). `use_figma` öncesinde `figma-use` skill'i yüklenir. Görseller `upload_assets` ile yüklenir. Laptopta `/mcp` ile yeniden yetkilendirme gerekir.
 - Yeni MCP sunucusu eklemek veya ayar değiştirmek her zaman kullanıcı onayı gerektirir.
 
 ### Kalite kapısı (her alt agent çıktısı için)
