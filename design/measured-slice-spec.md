@@ -54,7 +54,7 @@ Antrasit zemin, "Measured" wordmark ve tek bir mandalina cetvel çizgisi. 0,8 sn
 
 ### 3. About
 - **H2:** A little about you. *(çocuk yolunda: "A little about your child.")*
-- **Girdiler:** Sex (Boy / Girl segment) ve Age (10–20 yatay sayı seçici, varsayılan 14)
+- **Girdiler:** Sex (Male / Female) ve Age (10–25 yatay sayı seçici, varsayılan 14; 18+ için "growth likely complete")
 - **Helper:** We use this to pick the right growth curve.
 - **CTA:** Continue
 

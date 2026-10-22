@@ -21,6 +21,7 @@ import { Display, H1, H2 } from './Text';
 
 // Stops the browser from scrolling the page while the ruler is dragged (react-native-web only).
 const WEB_NO_SCROLL = { touchAction: 'none' } as object;
+const MAX_FLING_STEPS = 12;
 
 function clamp(n: number, lo: number, hi: number) {
   'worklet';
@@ -184,8 +185,17 @@ export function RulerScale({
     onChangeRef.current = onChange;
   });
 
+  // True from touch-down until the release animation settles. While it is set, `value` only
+  // echoes our own (slightly delayed) emits, so syncing from it would yank the strip backwards.
+  const interacting = useRef(false);
+  const setInteracting = useCallback((next: boolean) => {
+    interacting.current = next;
+  }, []);
+  const settling = useSharedValue(false);
+
   // Follow value changes that did not come from a drag (for example accessibility actions).
   useEffect(() => {
+    if (interacting.current) return;
     lastEmitted.current = Math.round(value);
     if (Math.round(pos.get()) !== Math.round(value)) {
       cancelAnimation(pos);
@@ -214,7 +224,9 @@ export function RulerScale({
     failOffsetY: vertical ? undefined : ([-16, 16] as [number, number]),
     onBegin: () => {
       cancelAnimation(pos);
+      settling.set(false);
       startPos.set(pos.get());
+      scheduleOnRN(setInteracting, true);
     },
     onUpdate: (e) => {
       const delta = vertical ? e.translationY : -e.translationX;
@@ -222,13 +234,27 @@ export function RulerScale({
     },
     onDeactivate: (e) => {
       const velocity = vertical ? e.velocityY : -e.velocityX;
-      const projected = pos.get() + (velocity * 0.16) / gap;
-      const target = Math.round(clamp(projected, min, max));
+      // Cap the fling so a fast release (or one far outside the ruler) can't throw it across the scale.
+      const fling = clamp((velocity * 0.16) / gap, -MAX_FLING_STEPS, MAX_FLING_STEPS);
+      const target = Math.round(clamp(pos.get() + fling, min, max));
       const distance = Math.abs(target - pos.get());
+      settling.set(true);
       pos.set(
-        withTiming(target, {
-          duration: 220 + Math.min(distance, 20) * 12,
-          easing: Easing.out(Easing.cubic),
+        withTiming(
+          target,
+          { duration: 220 + Math.min(distance, 20) * 12, easing: Easing.out(Easing.cubic) },
+          (finished) => {
+            if (finished) scheduleOnRN(setInteracting, false);
+          },
+        ),
+      );
+    },
+    onFinalize: () => {
+      // Touch cancelled without a release (system gesture, scroll took over): snap to the nearest tick.
+      if (settling.get()) return;
+      pos.set(
+        withTiming(Math.round(pos.get()), { duration: 180 }, (finished) => {
+          if (finished) scheduleOnRN(setInteracting, false);
         }),
       );
     },

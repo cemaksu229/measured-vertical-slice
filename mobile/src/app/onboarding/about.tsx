@@ -16,11 +16,11 @@ import { fontFamily } from '@/theme/tokens';
 import { useTheme } from '@/theme/useTheme';
 
 const AGE_MIN = 10;
-const AGE_MAX = 20;
+const AGE_MAX = 25;
 
 const SEXES: readonly { value: Sex; label: string; icon: Icon }[] = [
-  { value: 'male', label: 'Boy', icon: GenderMale },
-  { value: 'female', label: 'Girl', icon: GenderFemale },
+  { value: 'male', label: 'Male', icon: GenderMale },
+  { value: 'female', label: 'Female', icon: GenderFemale },
 ];
 
 function SexTile({
